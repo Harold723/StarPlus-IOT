@@ -1,0 +1,45 @@
+/* src/styles/Breadcrumb.css o al final de App.css */
+
+.breadcrumb-content {
+    /* Asegura que haya espacio entre el botón y el breadcrumb */
+    display: flex;
+    align-items: center;
+    padding-left: 10px; /* Separación del botón */
+}
+
+.breadcrumb-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.breadcrumb-link {
+    /* Estilo por defecto de los enlaces navegables */
+    color: #4c84ff; 
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.breadcrumb-link.home-link {
+    /* Estilo especial para el primer 'Home' */
+    color: #333; 
+    font-weight: 600;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+    color: #f7931e;
+}
+
+.breadcrumb-link.current {
+    /* El último elemento (la página actual) no es un enlace */
+    color: #333; 
+    font-weight: 600;
+    cursor: default;
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #aaa;
+}

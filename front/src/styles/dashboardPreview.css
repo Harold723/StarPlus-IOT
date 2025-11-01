@@ -1,0 +1,96 @@
+/* Paleta de Colores (Similar a Nord) */
+:root {
+  --bg-dark: #2e3440;
+  --text-light: #eceff4;
+  --accent: #88c0d0;
+  --button-primary: #a3be8c;
+  --button-hover: #b4e4a0;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+/* 1. Estilo General de la Tarjeta */
+.dashboard-card {
+  background-color: var(--bg-dark);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px var(--shadow);
+  max-width: 350px;
+  margin: 30px auto;
+  color: var(--text-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid rgba(136, 192, 208, 0.3); /* Transparencia para el acento */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto Hover para la Tarjeta */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px var(--shadow);
+}
+
+/* 2. Estilo del Título */
+.dashboard-card-title {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+
+/* 3. Estilo de la Etiqueta de Acción */
+.dashboard-card-badge {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* 4. Estilo de la Información (Torre, Servidor, etc.) */
+.dashboard-card-info {
+  font-size: 1em;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* 5. Estilo de las Listas (Equipos) */
+.dashboard-card-list {
+  margin-top: 5px;
+  padding-left: 25px;
+  list-style-type: square;
+  font-size: 0.95em;
+}
+
+/* 6. Estilo del Botón */
+.dashboard-card-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: var(--button-primary);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efecto Hover para el Botón */
+.dashboard-card-button:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 2px 10px rgba(163, 190, 140, 0.5); /* Sombra suave */
+}
+
+/* Estilo para texto en negrita dentro de la tarjeta */
+.dashboard-card-info strong {
+    font-weight: 700;
+    color: var(--accent); /* Opcional: usar el color de acento para la negrita */
+}

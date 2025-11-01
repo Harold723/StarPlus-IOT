@@ -1,0 +1,167 @@
+/* ===================================================================
+   cardButtonCreate.css
+   =================================================================== */
+
+/* Contenedor Principal */
+.create-page-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1400px; /* Limita el ancho total */
+    flex-wrap: wrap;
+    background-color: #f4f7f9; /* Fondo muy claro */
+    min-height: 80vh;
+}
+
+/* Tarjeta del Formulario */
+.form-card {
+    flex: 2; /* Más espacio para el formulario */
+    min-width: 350px;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Inputs y Selects */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fafafa;
+}
+
+.form-input:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Fieldset (Asociaciones) */
+.form-fieldset {
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.form-fieldset legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+}
+
+.form-fieldset p {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Select Múltiple */
+.form-select-multiple {
+    height: 150px !important; /* Mantiene la altura para selección múltiple */
+}
+
+/* Botón de Submit */
+.btn-submit {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #28a745; /* Color verde para crear */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.btn-submit:disabled {
+    background-color: #90ee90;
+    cursor: not-allowed;
+}
+
+/* Contenedor de Previsualización */
+.preview-container {
+    flex: 1;
+    min-width: 300px;
+    align-self: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.preview-container h3 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Mensajes */
+.message-success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.message-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Media Queries para ajuste de responsividad */
+@media (max-width: 900px) {
+    .create-page-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .form-card, .preview-container {
+        max-width: 100%;
+        width: 100%;
+    }
+}

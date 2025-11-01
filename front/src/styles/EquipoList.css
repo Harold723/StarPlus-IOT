@@ -1,0 +1,90 @@
+/* ==================================== */
+/* 2. Estilos para Listados (Ver) */
+/* ==================================== */
+
+.list-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+}
+
+.list-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.data-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.data-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.data-info strong {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.data-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.data-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos Específicos para Botones de Listas (clase .btn) */
+.btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Para Link y otros elementos */
+    display: inline-block;
+    text-align: center;
+}
+
+.btn.edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn.edit:hover {
+    background-color: #0056b3;
+}
+
+.btn.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn.delete:hover {
+    background-color: #d32f2f;
+}

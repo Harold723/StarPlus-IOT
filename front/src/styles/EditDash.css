@@ -1,0 +1,235 @@
+/* ===================================================================
+   CSS GLOBAL Y RESETS
+   =================================================================== */
+body {
+    background-color: #f4f7f9; /* Fondo de la página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+/* ===================================================================
+   CONTENEDOR PRINCIPAL
+   =================================================================== */
+.edit-container {
+    padding: 30px;
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===================================================================
+   CAMPOS DE FORMULARIO
+   =================================================================== */
+.form-label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    -webkit-appearance: none; /* Estilo para select */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Pseudo-selector correcto para FOCUS */
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* ===================================================================
+   FIELDSETS (Agrupaciones)
+   =================================================================== */
+.fieldset {
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.fieldset-legend {
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Estilos Específicos */
+.primary-fieldset {
+    border: 1px solid #007bff;
+    background-color: #f9fbfd;
+}
+
+.secondary-fieldset {
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ===================================================================
+   LISTA DE EQUIPOS ASIGNADOS
+   =================================================================== */
+.assigned-label {
+    margin-top: 10px;
+    font-weight: bold;
+    border-bottom: 1px dashed #bbb;
+    padding-bottom: 5px;
+}
+
+.assigned-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.equipo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 5px;
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+.equipo-item:last-child {
+    border-bottom: none;
+}
+.remove-button {
+    /* ✅ Ajustar el padding vertical (8px) y horizontal (15px) */
+    padding: 8px 15px; 
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s, opacity 0.2s;
+    /* ✅ Asegurar que solo ocupe el espacio necesario */
+    width: auto; 
+    flex-shrink: 0; /* Evita que el botón se reduzca si el texto es muy largo */
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+    opacity: 0.9;
+}
+
+
+/* ===================================================================
+   BOTÓN PRINCIPAL Y MENSAJES DE ESTADO
+   =================================================================== */
+.submit-button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Pseudo-selector correcto para HOVER */
+.submit-button:hover:not(.loading) {
+    background-color: #0056b3;
+}
+
+/* Estado Disabled/Loading */
+.submit-button.loading,
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #007bff; /* Mantiene el color base, pero con menos opacidad */
+}
+
+/* Mensajes de Estado */
+.loading-message,
+.error-message {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 700px;
+    font-weight: bold;
+}
+
+.loading-message {
+    color: #007bff;
+}
+
+.error-message {
+    color: #a71d2a;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.warning-box {
+    color: #856404;
+    padding: 10px;
+    border: 1px dashed #ffeeba;
+    background-color: #fff3cd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}

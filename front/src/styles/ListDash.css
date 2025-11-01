@@ -1,0 +1,158 @@
+/* ================================================= */
+/* 1. Contenedor Principal y Título */
+/* ================================================= */
+.dashboard-list-page {
+    /* Mismo estilo de panel central que la otra lista */
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    font-family: 'Inter', sans-serif, "Poppins";
+    border: 1px solid #e0e7eb;
+}
+
+.dashboard-list-page h2 {
+    text-align: left;
+    color: #1f2937;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ------------------------------------------------- */
+/* Mensajes de Estado y Botón de Creación */
+/* ------------------------------------------------- */
+.loading-message, .error-message, .success-message {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.loading-message {
+    color: #4b5563;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+}
+
+.success-message {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.create-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #10b981; /* Verde primario (un color fresco para creación) */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.create-button:hover {
+    background-color: #059669;
+    box-shadow: 0 6px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ================================================= */
+/* 2. Estilos de la Tabla */
+/* ================================================= */
+.dashboard-table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+    /* Sombra suave, menos que el contenedor principal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+.dashboard-table thead tr {
+    background-color: #f9fafb; /* Fondo muy claro para el encabezado */
+}
+
+.dashboard-table th, .dashboard-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6; /* Línea separadora muy clara */
+    color: #374151; /* Texto oscuro */
+    font-size: 0.95em;
+}
+
+.dashboard-table th {
+    font-weight: 700;
+    color: #6b7280; /* Gris para los títulos de columna */
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+}
+
+.dashboard-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.dashboard-table tbody tr:hover {
+    background-color: #f3f4f6; /* Resaltar fila al pasar el mouse */
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ------------------------------------------------- */
+/* Estilos de Acciones (Editar/Eliminar) */
+/* ------------------------------------------------- */
+td .action-link {
+    color: #3b82f6; /* Azul primario */
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+td .action-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.delete-button {
+    color: #ef4444; /* Rojo de error/peligro */
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.delete-button:hover {
+    color: #b91c1c;
+}
+
+/* ------------------------------------------------- */
+/* 3. Responsividad Básica */
+/* ------------------------------------------------- */
+@media (max-width: 768px) {
+    .dashboard-list-page {
+        padding: 20px;
+        margin: 20px;
+        overflow-x: auto; /* Permite desplazamiento horizontal para tablas */
+    }
+
+    /* En dispositivos pequeños, la tabla se desplaza */
+    .dashboard-table {
+        min-width: 600px; 
+    }
+}

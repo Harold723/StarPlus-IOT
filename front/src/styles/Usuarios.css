@@ -1,0 +1,339 @@
+/* ===================================================================
+   ADMIN PAGE CONTENEDOR Y TARJETA
+   =================================================================== */
+.admin-container {
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineación superior */
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-card {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 700px;
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-2px);
+}
+
+.admin-card h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.admin-subtitle {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+/* ===================================================================
+   LISTA DE USUARIOS
+   =================================================================== */
+.admin-user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-user-item {
+    background: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.admin-user-item:hover {
+    background: #f8f9fa;
+}
+
+.admin-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Etiquetas de Rol */
+.role-badge {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.role-badge.admin {
+    background-color: #007bff;
+    color: white;
+}
+
+.role-badge.user {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* ===================================================================
+   CONTROLES DE ACCIÓN (Rol y Eliminar)
+   =================================================================== */
+
+/* Contenedor que agrupa el selector de rol y el botón de eliminar */
+.admin-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-role-control label {
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+/* Select de Rol */
+.admin-role-control select,
+.role-select {
+    padding: 6px 10px;
+    border-radius: 8px; /* Ajuste para coincidir con otros elementos */
+    border: 1px solid #ccc;
+    background: white;
+    transition: border-color 0.2s;
+    font-size: 0.95rem;
+}
+
+.admin-role-control select:focus,
+.role-select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* ===================================================================
+   BOTONES
+   =================================================================== */
+
+/* Estilo Base para todos los botones de acción (lista y modal) */
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+/* Botón de Eliminación en la lista de usuarios */
+.btn-delete {
+    background-color: #dc3545; /* Rojo de Eliminar */
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.btn-delete:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Botón ACEPTAR/CONFIRMAR (Rol) */
+.btn-accept, .btn-confirm {
+    background-color: #34D399; /* Verde de la confirmación */
+    color: white;
+}
+
+.btn-accept:hover, .btn-confirm:hover {
+    background-color: #10B981;
+}
+
+/* Botón CANCELAR/CERRAR */
+.btn-cancel, .btn-ok {
+    background-color: #6c757d; /* Gris para cancelar/cerrar */
+    color: white;
+}
+
+.btn-cancel:hover, .btn-ok:hover {
+    background-color: #5a6268;
+}
+
+/* Botón para CONFIRMAR ELIMINACIÓN en el modal (más enfático) */
+.btn-danger {
+    background-color: #c0392b; 
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #a71d2a;
+}
+
+
+/* ===================================================================
+   FOOTER Y MENSAJES DE ESTADO
+   =================================================================== */
+.admin-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.admin-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.admin-link:hover {
+    text-decoration: underline;
+}
+
+.admin-loading,
+.admin-error {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.1rem;
+}
+
+.admin-error {
+    color: #dc3545;
+}
+
+
+/* ===================================================================
+   ESTILOS DE MODAL (Overlay, Tarjeta y Base)
+   =================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-card h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+}
+
+.modal-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.modal-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: white; /* Color base del ícono */
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px; 
+}
+
+.modal-buttons button {
+    flex-grow: 1; 
+}
+
+/* ===================================================================
+   ESTILOS ESPECÍFICOS DE MODAL
+   =================================================================== */
+
+/* 1. Modal de Espera/Proceso */
+.processing-modal .modal-icon {
+    background-color: #A350C7; /* Morado */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 2. Modal de Confirmación (ROL) */
+.confirmation-modal .modal-icon {
+    background-color: #36404a; /* Gris oscuro */
+}
+
+/* 3. Modal de Resultado (Éxito o Error) */
+.result-modal {
+    border-top: 5px solid; 
+}
+
+/* ÉXITO */
+.result-modal.success {
+    border-color: #10B981; /* Verde */
+}
+
+.result-modal .success-icon {
+    background-color: #10B981;
+}
+
+/* ERROR */
+.result-modal.error {
+    border-color: #dc3545; /* Rojo */
+}
+
+.result-modal .error-icon {
+    background-color: #dc3545;
+}
+
+/* Contador */
+.countdown-message {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 20px !important; 
+    font-weight: 500;
+}
+
+/* 4. Modal de Eliminación (ADVERTENCIA) */
+.delete-modal {
+    border-top: 5px solid #ffc107; /* Amarillo/Naranja de advertencia */
+}
+
+.delete-modal .modal-icon {
+    background-color: #ffc107;
+    color: #333; /* Texto oscuro para el ícono de advertencia */
+}
+

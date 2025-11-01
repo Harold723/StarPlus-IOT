@@ -1,0 +1,131 @@
+/* ===================================================================
+   ESTILOS BASE - Centrado de la Tarjeta
+   =================================================================== */
+body {
+    background-color: #f4f7f9; /* Fondo ligero */
+    font-family: 'Poppins', sans-serif; /* Usamos la fuente del ejemplo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    /* Clases centrales del ejemplo para centrar */
+    max-width: 500px;
+    margin: 50px auto; 
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    width: 90%; /* Asegura que funcione bien en móviles */
+    box-sizing: border-box;
+}
+
+.form-title {
+    /* Basado en form-container h2 */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #2c3e50;
+}
+
+
+/* ===================================================================
+   CAMPOS DEL FORMULARIO
+   =================================================================== */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Asegura que las etiquetas estén a la izquierda */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Importante para que el padding no desborde el 100% */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ===================================================================
+   BOTÓN DE ENVÍO
+   =================================================================== */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* ===================================================================
+   ALERTAS Y FOOTER
+   =================================================================== */
+.alert {
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.alert.success {
+    background-color: #e7f9ed;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.alert.error {
+    background-color: #fdecea;
+    color: #c0392b;
+    border: 1px solid #c0392b;
+}
+
+.auth-footer {
+    margin-top: 25px; /* Aumenta el margen para separarlo del botón */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.auth-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}

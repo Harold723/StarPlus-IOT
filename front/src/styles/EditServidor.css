@@ -1,0 +1,169 @@
+/* ==================================== */
+/* Estilos para ServidorEditPage */
+/* ==================================== */
+
+/* ---- CONTENEDOR PRINCIPAL ---- */
+.servidor-edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---- TARJETA DE EDICIÓN ---- */
+.servidor-edit-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    transition: all 0.3s ease;
+}
+
+.servidor-edit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- TÍTULO Y ID ---- */
+.servidor-edit-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.servidor-edit-card .edit-id {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ---- FORMULARIO ---- */
+.servidor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.servidor-form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.servidor-form input,
+.servidor-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.servidor-form input:focus,
+.servidor-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* ---- BOTONES ---- */
+.servidor-btn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 10px; 
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.servidor-btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    margin-top: 25px;
+}
+
+.servidor-btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.servidor-btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.servidor-btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.servidor-btn-secondary {
+    background-color: #ecf0f1;
+    color: #34495e;
+    border: 1px solid #bdc3c7;
+}
+
+.servidor-btn-secondary:hover {
+    background-color: #d5dbdb;
+}
+
+.servidor-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ---- MENSAJES ---- */
+.message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.center-loading {
+    text-align: center;
+    padding: 40px;
+    color: #333;
+}
+.center-error {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+    .servidor-edit-card {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .servidor-edit-container {
+        padding: 20px;
+    }
+}

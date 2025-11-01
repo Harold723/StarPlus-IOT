@@ -1,0 +1,119 @@
+/* src/App.css */
+
+/* 🔑 RESET GLOBAL: Esencial para que 100vh funcione sin interferencias */
+html, body, #root {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------------------- */
+/* 1. LAYOUT PRINCIPAL Y DASHBOARD */
+/* ---------------------------------- */
+.App {
+    display: flex;
+    min-height: 100vh;
+    width: 100%; 
+}
+
+/* VISTA DE DASHBOARD: Se aplica a AppContent */
+.dashboard-view {
+    flex-direction: column; 
+    position: relative; 
+    width: 100%; 
+    background-color: #f0f2f5; /* Color de fondo claro para el dashboard */
+}
+
+
+/* ---------------------------------- */
+/* 2. BARRAS DE NAVEGACIÓN (Dashboard) - CLAVE: MARGEN DE 280PX */
+/* ---------------------------------- */
+.top-nav {
+    width: auto; 
+    /* 🔑 CLAVE: El marginLeft ahora es dinámico en App.tsx. Dejamos las reglas básicas. */
+    height: 45px;
+    background-color: #36404a; 
+    color: #ecf0f1;
+    display: flex;
+    align-items: center; 
+    padding: 10px 20px; 
+    transition: margin-left 0.3s;
+}
+/* 🔑 CLAVE: Aplicamos el color deseado (ej. #3498db, un azul brillante) al link */
+.top-nav a {
+    color: #ffffff; /* Puedes cambiar este valor por el código de color que prefieras */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em; /* Opcional: Para que el logo sea más grande */
+}
+
+.breadcrumb-bar {
+    width: auto; 
+    /* 🔑 CLAVE: El marginLeft ahora es dinámico en App.tsx. Dejamos las reglas básicas. */
+    display: flex;
+    align-items: center;
+    padding: 20px 0px; 
+    background-color: #ffffff; 
+    height: 40px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    z-index: 50;
+    transition: margin-left 0.3s;
+}
+
+/* 🍔 ESTILOS DEL BOTÓN HAMBURGUESA: BASADO EN TU IMAGEN 🍔 */
+.sidebar-open-btn {
+    /* Diseño de la cápsula gris oscura */
+    background-color: #363a40; /* Gris oscuro exacto de la imagen */
+    color: #f1f1f1; /* Blanco/Gris claro para el símbolo '☰' */
+    border: none;
+    border-radius: 6px; /* Esquinas redondeadas */
+    cursor: pointer;
+    
+    /* Dimensiones y Centrado */
+    width: 40px; /* Ancho similar al de la imagen */
+    height: 36px; /* Alto similar al de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Estilo del símbolo '☰' */
+    font-size: 18px; 
+    font-weight: bold; /* Para que el símbolo se vea más marcado */
+    line-height: 1; 
+    
+    /* Separación del breadcrumb */
+    margin-right: 15px; 
+    padding: 0; /* Asegurar que no haya padding extra */
+    
+    /* Transición suave al hacer hover */
+    transition: background-color 0.2s;
+}
+
+.sidebar-open-btn:hover {
+    background-color: #4a4f57; /* Un gris un poco más claro al pasar el ratón */
+}
+/* FIN ESTILOS BOTÓN HAMBURGUESA */
+
+/* ---------------------------------- */
+/* 3. CONTENIDO PRINCIPAL */
+/* ---------------------------------- */
+.main-content-area {
+    flex-grow: 1; 
+    /* 🔑 CLAVE: El marginLeft ahora es dinámico en App.tsx. Dejamos las reglas básicas. */
+    padding: 20px;
+    background-color: transparent; 
+    transition: margin-left 0.3s;
+}
+
+
+/* ---------------------------------- */
+/* 4. ESTILO DE LA CAJA DE BIENVENIDA */
+/* ---------------------------------- */
+.welcome-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin-bottom: 20px; 
+}

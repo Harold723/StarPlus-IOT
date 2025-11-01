@@ -1,0 +1,219 @@
+/* =========================================================
+   🌟 ESTILOS GLOBALES PARA MODALES REUTILIZABLES
+   Compatible con ModalProcessing, ModalConfirm y ModalResult
+   ========================================================= */
+
+/* --- Fondo Oscuro Semi-transparente --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* --- Tarjeta del Modal --- */
+.modal-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* --- Iconos del Modal --- */
+.modal-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.processing-icon::after {
+  content: "⏳";
+  display: inline-block;
+  animation: spin 1.5s linear infinite;
+}
+
+.confirm-icon {
+  color: #3498db;
+}
+
+.delete-icon {
+  color: #e74c3c;
+}
+
+.success-icon {
+  color: #2ecc71;
+}
+
+.error-icon {
+  color: #e74c3c;
+}
+
+/* --- Texto del Modal --- */
+.modal-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.modal-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+/* --- Botones del Modal --- */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+
+/* Estilos por tipo */
+.btn-accept {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-accept:hover {
+  background-color: #2980b9;
+}
+
+.btn-cancel {
+  background-color: #bdc3c7;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #95a5a6;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.btn-ok {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-ok:hover {
+  background-color: #219150;
+}
+
+/* --- Modal de Procesamiento --- */
+.processing-modal h2 {
+  margin-top: 10px;
+  color: #444;
+}
+
+.processing-modal p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* --- Modal de Confirmación --- */
+.confirmation-modal h2 {
+  color: #2c3e50;
+}
+
+.confirmation-modal.delete-modal h2 {
+  color: #e74c3c;
+}
+
+.confirmation-modal.delete-modal p {
+  color: #a93226;
+}
+
+/* --- Modal de Resultado (Éxito o Error) --- */
+.result-modal.success {
+  border-top: 6px solid #2ecc71;
+}
+
+.result-modal.error {
+  border-top: 6px solid #e74c3c;
+}
+
+.result-modal h2 {
+  margin-top: 5px;
+}
+
+.countdown-message {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 8px;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Responsivo --- */
+@media (max-width: 480px) {
+  .modal-card {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .modal-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-card p {
+    font-size: 0.9rem;
+  }
+}
